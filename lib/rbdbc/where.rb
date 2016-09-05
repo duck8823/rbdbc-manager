@@ -12,7 +12,7 @@ class Where
 		if @column.nil? && @value.nil? && @operator.nil?
 			return ''
 		elsif (!@column.nil? && @value.nil?) || (@column.nil? && !@value.nil?) || (@column.nil? && @value.nil? && !@operator.nil?)
-			raise Exception.new('error: %s' % self)
+			raise Exception.new('error: {column=%s, value=%s, operator=%s}' % [@column, @value, @operator])
 		end
 		unless [Fixnum, Integer, String, TrueClass, FalseClass].include?(@value.class)
 			raise Exception.new('次の型は対応していません. %s (%s)' % [@column, @value.class.name])

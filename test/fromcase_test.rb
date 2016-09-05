@@ -1,14 +1,14 @@
 $:.unshift(File.dirname(File.expand_path(__FILE__)) + '/../lib/')
 require 'minitest/autorun'
 
-require 'sqlite3'
 require 'rbdbc'
 
+Test = Struct.new(:id, :name)
 
 class FromCaseTest < Minitest::Test
 
 	def test_list
-		manager = Rbdbc.connect(SQLite3, 'test.db')
+		manager = Rbdbc.connect('SQLite3', 'test.db')
 		manager.drop(Test).execute
 
 		manager.create(Test.new(id=Integer, name=String)).execute
@@ -25,7 +25,7 @@ class FromCaseTest < Minitest::Test
 	end
 
 	def test_single_result
-		manager = Rbdbc.connect(SQLite3, 'test.db')
+		manager = Rbdbc.connect('SQLite3', 'test.db')
 		manager.drop(Test).execute
 
 		manager.create(Test.new(id=Integer, name=String)).execute
@@ -43,7 +43,7 @@ class FromCaseTest < Minitest::Test
 	end
 
 	def test_delete
-		manager = Rbdbc.connect(SQLite3, 'test.db')
+		manager = Rbdbc.connect('SQLite3', 'test.db')
 		manager.drop(Test).execute
 
 		manager.create(Test.new(id=Integer, name=String)).execute

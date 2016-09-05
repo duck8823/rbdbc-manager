@@ -28,6 +28,8 @@ Gem::Specification.new do |spec|
 	spec.add_runtime_dependency 'dbd-pg'
 	spec.add_runtime_dependency 'dbd-sqlite3'
 
-	spec.add_development_dependency 'simplecov'
 	spec.add_development_dependency 'minitest'
+	spec.add_development_dependency 'test_helper'
+	spec.add_development_dependency 'simplecov'
+	spec.add_development_dependency 'coveralls'
 end

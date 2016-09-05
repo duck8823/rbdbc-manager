@@ -1,7 +1,6 @@
 $:.unshift(File.dirname(File.expand_path(__FILE__)) + '/../lib/')
 require 'minitest/autorun'
 
-require 'sqlite3'
 require 'rbdbc'
 
 

@@ -4,6 +4,7 @@ require 'minitest/autorun'
 require 'rbdbc'
 
 Test = Struct.new(:id, :name)
+Fail = Struct.new(:fail)
 
 class ManagerTest < Minitest::Test
 

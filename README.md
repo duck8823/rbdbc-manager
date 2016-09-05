@@ -3,7 +3,7 @@
 [![Coverage Status](http://coveralls.io/repos/github/duck8823/rbdbc-manager/badge.svg?branch=master)](https://coveralls.io/github/duck8823/rbdbc-manager?branch=master)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)  
   
-blessしたリファレンスでデータベースを操作する  
+構造体でデータベースを操作する  
   
 ## INSTALL
 ```sh

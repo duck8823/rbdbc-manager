@@ -1,7 +1,6 @@
 $:.unshift(File.dirname(File.expand_path(__FILE__)) + '/../lib/')
 require 'minitest/autorun'
 
-require 'pg'
 require 'rbdbc'
 
 Hoge = Struct.new(:id, :name, :flg)

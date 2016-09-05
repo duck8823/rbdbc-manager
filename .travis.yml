@@ -1,5 +1,13 @@
-sudo: false
 language: ruby
+services:
+  - postgresql
 rvm:
   - 2.2.4
-before_install: gem install bundler -v 1.12.5
+before_install:
+  - gem install bundler
+install:
+  - bundle install
+before_script:
+  - psql -c 'create database test;' -U postgres
+script:
+  - bundle exec rake test
