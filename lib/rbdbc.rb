@@ -1,3 +1,4 @@
+require 'rbdbc/version'
 require 'rbdbc/manager'
 require 'rbdbc/where'
 
